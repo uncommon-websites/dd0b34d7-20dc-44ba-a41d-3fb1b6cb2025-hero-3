@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svenn - Construction Management & Profitability Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.97); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-0 { animation-delay: 0ms; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+
+        .text-balance { text-wrap: balance; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in-up, .animate-fade-in, .animate-scale-in {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-[#0A0A0A] font-sans antialiased overflow-x-hidden selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Header -->
+    <header class="max-w-[1440px] mx-auto px-6 lg:px-10 py-5 flex items-center justify-between w-full animate-fade-in delay-0">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 28C21.732 28 28 21.732 28 14C28 6.26801 21.732 0 14 0C6.26801 0 0 6.26801 0 14C0 21.732 6.26801 28 14 28Z" fill="#0A0A0A"/>
+                <path d="M18.5 14L11 18.5V9.5L18.5 14Z" fill="white"/>
+            </svg>
+            <span class="font-bold text-[24px] tracking-tight">svenn</span>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium text-[#878787]">
+            <a href="#" class="hover:text-[#0A0A0A] transition-colors duration-200">Modules</a>
+            <a href="#" class="hover:text-[#0A0A0A] transition-colors duration-200">HMS Compliance</a>
+            <a href="#" class="hover:text-[#0A0A0A] transition-colors duration-200">Pricing</a>
+            <a href="#" class="hover:text-[#0A0A0A] transition-colors duration-200">Integrations</a>
+        </nav>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-6">
+            <!-- Language Selector -->
+            <div class="hidden sm:flex items-center gap-1.5 cursor-pointer hover:opacity-70 transition-opacity">
+                <span class="text-lg leading-none">🇬🇧</span>
+                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            
+            <!-- Divider -->
+            <div class="hidden sm:block w-px h-5 bg-gray-200"></div>
+
+            <a href="#" class="hidden sm:block text-[15px] font-medium hover:opacity-70 transition-opacity">Log in</a>
+            
+            <a href="#" class="bg-[#0A0A0A] text-white px-5 py-2.5 rounded-full text-[15px] font-medium flex items-center gap-2 hover:opacity-90 transition-all duration-200 active:scale-97">
+                Start 14-day free trial
+                <div class="bg-[#2A2A2A] rounded-[4px] p-[4px] ml-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="max-w-[1440px] mx-auto pt-16 lg:pt-24 pb-20">
+        
+        <!-- Hero Text -->
+        <div class="px-6 lg:px-10 max-w-4xl">
+            <p class="text-[11px] font-bold tracking-[0.15em] text-[#878787] uppercase mb-6 animate-fade-in-up delay-100">
+                Specialized Construction Management
+            </p>
+            
+            <h1 class="text-[48px] md:text-[64px] lg:text-[80px] leading-[1.05] font-bold tracking-[-0.04em] text-[#0A0A0A] text-balance mb-10 animate-fade-in-up delay-200">
+                The first <span class="relative inline-block z-10">workflow
+                    <svg class="absolute w-full h-[12px] -bottom-[2px] left-0 z-[-1] text-[#007AFF]" viewBox="0 0 100 10" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 8 Q 50 4 98 8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                    </svg>
+                </span> and <span class="relative inline-block z-10">profitability
+                    <svg class="absolute w-full h-[12px] -bottom-[2px] left-0 z-[-1] text-[#A7F3D0]" viewBox="0 0 100 10" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 7 Q 50 5 98 7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                    </svg>
+                </span><br class="hidden md:block">
+                platform your crew will love
+            </h1>
+            
+            <a href="#" class="inline-flex items-center gap-2 bg-[#0A0A0A] text-white px-6 py-3.5 rounded-full text-[16px] font-medium hover:opacity-90 transition-all duration-200 active:scale-97 animate-fade-in-up delay-300">
+                Book a demo
+                <div class="bg-[#2A2A2A] rounded-[4px] p-[4px] ml-1">
+                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path></svg>
+                </div>
+            </a>
+        </div>
+
+        <!-- Hero Images Grid/Carousel -->
+        <div class="mt-16 lg:mt-24 pl-6 lg:pl-10 flex gap-4 lg:gap-6 h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden animate-scale-in delay-400">
+            
+            <!-- Image 1: Blue Abstract Box -->
+            <div class="w-[60px] md:w-[80px] lg:w-[100px] flex-shrink-0 rounded-[24px] lg:rounded-[32px] bg-[#3B82F6] relative overflow-hidden flex flex-col justify-center items-end pr-2 lg:pr-4">
+                <span class="text-4xl md:text-6xl lg:text-8xl font-black text-white/20 leading-[0.8] -mr-4 lg:-mr-8">D</span>
+                <span class="text-4xl md:text-6xl lg:text-8xl font-black text-white/20 leading-[0.8] -mr-4 lg:-mr-8 mt-2 lg:mt-4">R</span>
+                <span class="text-4xl md:text-6xl lg:text-8xl font-black text-white/20 leading-[0.8] -mr-4 lg:-mr-8 mt-2 lg:mt-4">E</span>
+            </div>
+
+            <!-- Image 2: Phone Mockup Box -->
+            <div class="w-[320px] md:w-[460px] lg:w-[560px] flex-shrink-0 rounded-[24px] lg:rounded-[32px] bg-[#F4F6F8] relative overflow-hidden flex justify-center items-end pt-12 lg:pt-16">
+                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/dd0b34d7-20dc-44ba-a41d-3fb1b6cb2025/hero-3-img-0-1793278179756.png" alt="Svenn Mobile Construction Interface" class="w-[85%] max-w-[380px] h-auto object-contain rounded-t-[32px] lg:rounded-t-[48px] shadow-[0_20px_50px_rgb(0,0,0,0.1)] translate-y-8 lg:translate-y-12">
+            </div>
+
+            <!-- Image 3: Worker Photo Box with Floating UI -->
+            <div class="w-[280px] md:w-[380px] lg:w-[440px] flex-shrink-0 rounded-[24px] lg:rounded-[32px] relative overflow-hidden">
+                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/dd0b34d7-20dc-44ba-a41d-3fb1b6cb2025/hero-3-img-1-1793278179360.png" alt="Carpenter documenting site work" class="absolute inset-0 w-full h-full object-cover">
+                
+                <!-- Floating UI Element 1 -->
+                <div class="absolute top-[45%] right-4 lg:right-8 bg-white rounded-full px-3 py-2 lg:px-4 lg:py-2.5 flex items-center gap-2 lg:gap-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] whitespace-nowrap">
+                    <div class="w-6 h-6 lg:w-7 lg:h-7 bg-[#F3E8FF] rounded-full flex items-center justify-center">
+                        <svg class="w-3 h-3 text-[#A855F7]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                    </div>
+                    <span class="text-[13px] lg:text-[14px] font-semibold text-[#0A0A0A]">Mobile Inspection</span>
+                    <span class="text-[13px] lg:text-[14px] text-[#878787]">Start</span>
+                </div>
+                
+                <!-- Floating UI Element 2 -->
+                <div class="absolute bottom-8 lg:bottom-10 left-4 lg:left-6 bg-white rounded-full px-3 py-2 lg:px-4 lg:py-2.5 flex items-center gap-2 lg:gap-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] whitespace-nowrap">
+                    <div class="w-6 h-6 lg:w-7 lg:h-7 bg-[#FEE2E2] rounded-full flex items-center justify-center">
+                        <svg class="w-3 h-3 text-[#EF4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <span class="text-[13px] lg:text-[14px] font-semibold text-[#0A0A0A]">AI Bid Calculation</span>
+                    <span class="text-[13px] lg:text-[14px] text-[#878787]">Open</span>
+                </div>
+            </div>
+
+            <!-- Image 4: Right Edge Photo Box -->
+            <div class="w-[160px] md:w-[220px] lg:w-[280px] flex-shrink-0 rounded-[24px] lg:rounded-[32px] relative overflow-hidden">
+                <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/dd0b34d7-20dc-44ba-a41d-3fb1b6cb2025/hero-3-img-0-1793278184251.png" alt="Construction project site" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
